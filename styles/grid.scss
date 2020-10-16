@@ -1,0 +1,60 @@
+@import './config';
+
+.grid {
+  margin: 0 auto;
+  max-width: 1400px;
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.col {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    @include columns($i);
+  }
+}
+
+@for $i from 1 through 12 {
+  .offset-col-#{$i} {
+    @include offset($i);
+  }
+}
+
+@media (max-width: 799px) {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      @include columns($i);
+    }
+  }
+
+  @for $i from 1 through 3 {
+    .offset-col-md-#{$i} {
+      @include offset($i);
+    }
+  }
+}
+
+@media (max-width: 499px) {
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      @include columns($i);
+    }
+  }
+
+  @for $i from 1 through 3 {
+    .offset-col-sm-#{$i} {
+      @include offset($i);
+    }
+  }
+}

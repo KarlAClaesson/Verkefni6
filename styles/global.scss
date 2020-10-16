@@ -1,0 +1,58 @@
+/*
+Global stílar
+*/
+
+@import './config';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: $darkgrey;
+  font-family: 'Open Sans', helvetica, arial, sans-serif;
+  font-size: 16px;
+}
+
+a {
+  color: $darkgrey;
+}
+
+button {
+  background-color: $darkgrey;
+  border: 1px solid $black;
+  border-radius: 5px;
+  color: $whiteish;
+  padding: 0.5rem;
+  transition: background-color $transition, color $transition;
+  word-break: initial;
+}
+
+button:hover {
+  background-color: $whiteish;
+  color: $darkgrey;
+}
+
+button:active {
+  background-color: $darkgrey;
+  border: 1px solid $black;
+  color: $whiteish;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Montaga', Georgia, serif;
+}
+
+/*
+Meginmál
+*/
+
+main {
+  padding-left: 10px;
+  padding-right: 10px;
+}

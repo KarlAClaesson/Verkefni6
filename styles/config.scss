@@ -1,0 +1,14 @@
+$black: #000;
+$grey: #999;
+$lightgrey: #ccc;
+$darkgrey: #222;
+$whiteish: #eee;
+$transition: 300ms ease-in-out;
+
+@mixin columns ($col: 1) {
+  width: ($col / 12 * 100) * 1%;
+}
+
+@mixin offset ($col: 1) {
+  margin-left: ($col / 12 * 100) * 1%;
+}
